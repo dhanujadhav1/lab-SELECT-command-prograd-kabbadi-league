@@ -39,4 +39,27 @@
 
 -- 19. **Write a query to display the names of the Winning teams in the month of March 2020. Display the records sorted in ascending order based on team name.**
 
--- 20. **Write a query to display the names of players who were the player of the match in the games held in March 2020. Display the records sorted in ascending order based on player name.**
+-- 20. **Write a query to display the names of players who were the player of the match in the games held in March 2020. Display the records sorted in ascending order based on player name
+
+
+select * from team order by name asc;
+select name from team where name LIKE 's%';
+select name from team   order by id asc;
+select COUNT(name) from team where name like 's%';
+select name from team where country in ('india','iran');
+select name from team where skills like 'b%';
+select name from team where skills like '%r';
+select name from team where id>2;
+select country from team order by name desc;
+select name from team  where country in('india') order by id desc;
+select couch from team where country='india';
+
+create table dj1 (dat DATE);
+insert into dj1 values(TO_DATE('12/01/2011','DD/MM/YYYY'));
+select dat from dj1;
+
+
+drop table dj1;
+create table dj1 (bb BOOLEAN);
+
+
